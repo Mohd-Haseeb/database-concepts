@@ -1,0 +1,48 @@
+.disk-arena {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.disk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.disk-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.disk-page:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+.disk-page.active-target {
+    border-color: var(--accent-green);
+    background: rgba(46, 204, 113, 0.1);
+    color: var(--accent-green);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+}
+
+.disk-icon {
+    opacity: 0.5;
+}

@@ -1,0 +1,161 @@
+.scenario-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.scenario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.scenario-select {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.scenario-select:focus {
+    border-color: var(--accent-blue);
+}
+
+.scenario-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-purple);
+    margin-bottom: 1.5rem;
+}
+
+.scenario-stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    opacity: 0.6;
+}
+
+.step-item.active-step {
+    opacity: 1;
+    background: rgba(59, 130, 246, 0.05);
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.step-item.completed-step {
+    opacity: 0.8;
+    border-color: var(--border-color);
+}
+
+.step-item.completed-step .step-number {
+    background: var(--accent-green);
+    color: #fff;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--bg-deep);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.active-step .step-number {
+    background: var(--accent-blue);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.step-text {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.scenario-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.scenario-controls .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    outline: none;
+}
+
+.scenario-controls .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.scenario-controls .btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.scenario-controls .btn-primary {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.scenario-controls .btn-primary:hover:not(:disabled) {
+    background: #2563eb;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.scenario-controls .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.scenario-controls .btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--text-muted);
+}

@@ -1,0 +1,250 @@
+/* Optimizer Module Styles */
+
+.optimizer-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.optimizer-panel {
+    background-color: var(--bg-deep);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.optimizer-panel h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Query Editor */
+.query-selector {
+    margin-bottom: 1.5rem;
+}
+
+.optimizer-select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.query-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+}
+
+.sql-code-block {
+    background-color: rgb(0 0 0 / 0.4);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgb(255 255 255 / 0.05);
+    overflow-x: auto;
+}
+
+.sql-code-block pre {
+    margin: 0;
+}
+
+.sql-code-block code {
+    color: #e2e8f0;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Pipeline Tabs */
+.pipeline-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-deep);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.pipeline-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pipeline-tab:hover {
+    background-color: rgb(255 255 255 / 0.05);
+}
+
+.pipeline-tab.active {
+    background-color: var(--bg-surface);
+    color: var(--accent-purple);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.2);
+    border: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.tab-arrow {
+    color: var(--border-color);
+    font-weight: bold;
+}
+
+/* Tree Visualizer */
+.pipeline-visualizer-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+}
+
+.pipeline-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.stage-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.tree-canvas {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    overflow: auto;
+    min-height: 400px;
+    background-color: rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
+}
+
+.tree-node-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree-node-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 180px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+    position: relative;
+}
+
+.tree-node-card.highlighted {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px rgb(59 130 246 / 0.3);
+    background-color: rgb(30 41 59 / 0.9);
+}
+
+.node-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.node-details {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    word-break: break-word;
+}
+
+.node-cost {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: var(--bg-deep);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.cost-value {
+    color: var(--accent-purple);
+    font-weight: bold;
+}
+
+.node-note {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    background: rgb(59 130 246 / 0.1);
+    padding: 0.4rem;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.children-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 20px;
+    position: relative;
+}
+
+.child-branch {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.branch-line {
+    width: 2px;
+    height: 20px;
+    background-color: var(--border-color);
+    position: absolute;
+    top: -20px;
+}
+
+/* Horizontal connecting lines for multiple children */
+.children-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: var(--border-color);
+}
+
+/* If there's only one child, no horizontal line needed */
+.children-container>.child-branch:only-child::before {
+    display: none;
+}

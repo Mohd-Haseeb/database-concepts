@@ -1,0 +1,104 @@
+.visibility-inspector {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.visibility-inspector h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.helper-text {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.vis-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    background: var(--bg-deep);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.vis-table th {
+    background: var(--bg-surface);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.vis-table th.th-conn-a {
+    color: var(--accent-blue);
+}
+
+.vis-table th.th-conn-b {
+    color: var(--accent-green);
+}
+
+.vis-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.vis-table td:last-child {
+    border-right: none;
+}
+
+.logical-group-td {
+    background: var(--bg-surface-hover);
+    font-weight: bold;
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.version-td {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-primary);
+}
+
+.tiny-meta {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.vis-cell {
+    text-align: center;
+    font-weight: bold;
+}
+
+.vis-cell.can-see {
+    color: var(--accent-green);
+    background: rgba(0, 255, 128, 0.05);
+}
+
+.vis-cell.can-see svg {
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
+.vis-cell.cannot-see {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.vis-cell.cannot-see svg {
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
+.vis-cell.empty {
+    color: var(--text-muted);
+}
