@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import BufferPoolApp from './features/buffer-pool/App';
 import JoinsApp from './features/joins/App';
 import TransactionsApp from './features/transactions/App';
@@ -62,7 +62,7 @@ function Layout({ children }) {
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -73,7 +73,7 @@ function App() {
                     <Route path="/wal/*" element={<WalApp />} />
                 </Routes>
             </Layout>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
